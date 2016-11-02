@@ -1,0 +1,133 @@
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.Game {
+  display: flex;
+  flex: 1;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: stretch;
+  padding-top: 0;
+  box-sizing: border-box;
+  background: url(retina_wood.png) repeat 50% 50%;
+  background-size: 50vmin;
+  background-attachment: fixed;
+}
+
+.Dashboard {
+  flex-basis: 10vmin;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 90vmin;
+  font-size: 2.8vmin;
+  line-height: 1.4;
+  overflow: hidden;
+}
+
+.Dashboard small > *{
+  white-space: nowrap;
+}
+.Dashboard .ScoreItem {
+  font-weight: bold;
+}
+
+.Grid {
+  font-family: sans-serif;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 0em;
+  height: 90vmin;
+  width: 90vmin;
+    
+  background: linear-gradient(170deg, #c6c7c7, #eff1f2);
+  background-size: 400% 400%;
+
+  -webkit-animation: grad 24s ease infinite;
+  -moz-animation: grad 24s ease infinite;
+  animation: grad 24s ease infinite;
+}
+
+@media (orientation: portrait) and (max-aspect-ratio: 9/10) {
+  .Grid {
+    height: 100vmin;
+    width: 100vmin;
+  }
+  .Dashboard {
+    font-size: 1.2em;
+    justify-content: flex-start;
+    padding-top: 1em;
+  }
+}
+
+.Square {
+  text-align: center;
+  box-sizing: border-box;
+  font-weight: bold;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: stretch;
+}
+.Square > div {
+  border-radius: 0;
+  flex: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+}
+.Square.exposed > div {
+  //*box-shadow: -1px -1px 0 rgba(100, 166, 100, 0.5) inset, 1px 1px 0 rgba(220, 255, 220, 0.5) inset;*/
+  text-shadow: 1px 1px 0 rgba(220, 255, 220, 0.5);
+  margin-top: 1px;
+  margin-left: 1px;
+}
+.Square.exposed.🐑 > div {
+  background-color: rgba(252, 233, 173, 0.7);
+  box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.1) inset, 1px 1px 0 rgba(255, 255, 255, 0.4) inset;
+}
+.Square.exposed.🌱 > div {
+  background-color: rgba(205, 255, 205, 0.3);
+  box-shadow: -1px -1px 0 rgba(100, 166, 100, 0.35) inset, 1px 1px 0 rgba(220, 255, 220, 0.5) inset;
+  text-shadow: 1px 1px 0 rgba(220, 255, 220, 0.5);
+
+}
+.Square.hidden > div {
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 2px;
+  box-shadow: inset -3px -3px 0 rgba(0,0,0,0.2), inset 3px 3px 0 rgba(255,255,255,0.6);
+
+  background: linear-gradient(144deg, #eceff1, #f5f5f5);
+  background-size: 68% 68%;
+}
+
+@-webkit-keyframes grad {
+    0%{background-position:73% 0%}
+    50%{background-position:28% 100%}
+    100%{background-position:73% 0%}
+}
+@-moz-keyframes grad {
+    0%{background-position:73% 0%}
+    50%{background-position:28% 100%}
+    100%{background-position:73% 0%}
+}
+@keyframes grad { 
+    0%{background-position:73% 0%}
+    50%{background-position:28% 100%}
+    100%{background-position:73% 0%}
+}
