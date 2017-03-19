@@ -102,7 +102,7 @@ class Dashboard extends Component {
             <span style={{display: this.props.step > 1 ? 'inline' : 'none'}}>You’ve explored more <strong>grass</strong>.</span>
           </small>
           <small style={{display: Object.keys(this.props.score).length < 1 ? 'inline' : 'none'}}>
-            <span>Welcome to <strong>Sheepsweeper v0.6.1</strong>! Punch a square.</span>
+            <span>Welcome to <strong>Sheepsweeper v0.7.0</strong>! Punch a square.</span>
           </small>
         </div>
         <div>
@@ -179,7 +179,7 @@ class Square extends Component {
       width: '' + 100 / this.props.grid.width + '%',
       height: '' + 100 / this.props.grid.height + '%',
       cursor: this.props.exposed ? 'default' : 'pointer',
-      fontSize: '' + this.props.grid.width / 4.2 + 'vmin',
+      fontSize: '' + this.props.grid.width / 5.2 + 'vmin',
     };
   }
   getCssClass() {
@@ -220,7 +220,7 @@ class Square extends Component {
 class SheepSquare extends Component {
   render() {
     return (
-      <div>🐑</div>
+      <div>&nbsp;</div>
     )
   }
 }
@@ -241,7 +241,7 @@ class GrassSquare extends Component {
   render() {
     return (
       <div style={{color: this.getCountColor()}}>
-        {this.props.count > 0 ? this.props.count : '🌱'}
+        {this.props.count > 0 ? this.props.count : ' '}
       </div>
     )
   }
