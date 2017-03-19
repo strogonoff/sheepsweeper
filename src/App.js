@@ -102,7 +102,7 @@ class Dashboard extends Component {
             <span style={{display: this.props.step > 1 ? 'inline' : 'none'}}>You’ve explored more <strong>grass</strong>.</span>
           </small>
           <small style={{display: Object.keys(this.props.score).length < 1 ? 'inline' : 'none'}}>
-            <span>Welcome to <strong>Sheepsweeper v0.6.1</strong>! Punch a square.</span>
+            <span>Welcome to <strong>Sheepsweeper v0.7.0</strong>! Punch a square.</span>
           </small>
         </div>
         <div>
